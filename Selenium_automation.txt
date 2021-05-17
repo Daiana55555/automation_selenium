@@ -1,0 +1,115 @@
+#Dropdown button  
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+
+driver = webdriver.Chrome(executable_path="C:\\Users\\Diana\\Desktop\\chromedriver_win32\\Chromedriver.exe")
+
+driver.get("https://crimeadigital.ru/free-software-tester-course-test")
+driver.implicitly_wait(10)
+driver.find_element_by_xpath("//span[4]").click()
+status=driver.find_element_by_xpath("//span[4]").is_displayed()
+status_ele=driver.find_element_by_xpath("//span[4]").is_selected()
+status_ele_ele=driver.find_element_by_xpath("//span[4]").is_enabled()
+print(status_ele_ele)
+print(status_ele)
+print(status)
+
+
+#Select dropdown button after all the fields under dropdown where we don't see any infromation 
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome(executable_path="C:\\Users\\Diana\\Desktop\\chromedriver_win32\\Chromedriver.exe")
+
+driver.get("https://crimeadigital.ru/free-software-tester-course-test")
+driver.implicitly_wait(10)
+driver.find_element_by_xpath("//span[4]").click()
+driver.find_element_by_xpath("//a[contains(text(),'О нас')]").click()
+time.sleep(5)
+driver.find_element_by_xpath("//span[4]").click()
+driver.find_element_by_xpath("//a[contains(text(),'Как мы работаем')]").click()
+time.sleep(5)
+driver.find_element_by_xpath("//span[4]").click()
+driver.find_element_by_xpath("//a[contains(text(),'Проекты')]").click()
+time.sleep(5)
+driver.find_element_by_xpath("//span[4]").click()
+driver.find_element_by_xpath("//a[contains(text(),'Вакансии')]").click()
+time.sleep(5)
+driver.find_element_by_xpath("//span[4]").click()
+driver.find_element_by_xpath("//a[contains(text(),'Контакты')]").click()
+
+
+
+#Запросить цену проекта 
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome(executable_path="C:\\Users\\Diana\\Desktop\\chromedriver_win32\\Chromedriver.exe")
+
+driver.get("https://crimeadigital.ru/free-software-tester-course-test")
+driver.implicitly_wait(10)
+driver.find_element_by_xpath("//a[@href='crimedigital.ru/price-project']").click()
+
+#Хочу проект 
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome(executable_path="C:\\Users\\Diana\\Desktop\\chromedriver_win32\\Chromedriver.exe")
+
+driver.get("https://crimeadigital.ru/free-software-tester-course-test")
+driver.implicitly_wait(10)
+driver.find_element_by_xpath("//div[@class='t396__elem tn-elem tn-elem__1465464441573200857372']//div[1]").click()
+ele=driver.find_element_by_xpath("//div[@class='t396__elem tn-elem tn-elem__1465464441573200857372']//div[1]").is_selected()
+print(ele)
+
+#Autorization 
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+driver = webdriver.Chrome(executable_path="C:\\Users\\Diana\\Desktop\\chromedriver_win32\\Chromedriver.exe")
+
+driver.get("https://crimeadigital.ru/free-software-tester-course-test")
+driver.implicitly_wait(10)
+driver.find_element_by_xpath("//a[normalize-space()='Ruby on Rails Developer']").click()
+time.sleep(5)
+driver.find_element_by_xpath("//a[contains(text(),'Откликнуться')]").click()
+time.sleep(5)
+driver.find_element_by_xpath("//form[@id='form135685350']//input[@name='Name']").send_keys("Diana")
+driver.find_element_by_xpath("//form[@id='form135685350']//input[@name='Name_2']").send_keys("Karapetyan")
+driver.find_element_by_xpath("//form[@id='form135685350']//input[@name='Email']").send_keys("diana_karapetian@yahoo.com")
+driver.find_element_by_xpath("//form[@id='form135685350']//input[@name='Input']").send_keys("+37498225699")
+driver.find_element_by_xpath("//form[@id='form135685350']//button[@type='submit'][contains(text(),'Откликнуться')]").click()
+
+
+#Связаться с нами
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+
+driver = webdriver.Chrome(executable_path="C:\\Users\\Diana\\Desktop\\chromedriver_win32\\Chromedriver.exe")
+
+driver.get("https://crimeadigital.ru/free-software-tester-course-test")
+driver.implicitly_wait(10)
+driver.find_element_by_xpath("//a[normalize-space()='Project Manager']").click()
+time.sleep(5)
+driver.find_element_by_xpath("//td[contains(text(),'Связаться с нами')]").click()
+driver.back()
+driver.back()
+
+
+
+
+
+
